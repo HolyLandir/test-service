@@ -47,6 +47,11 @@
 									<artifactId>log4j-core</artifactId>
 									<version>2.19.0</version>
 								</artifactItem>
+								<artifactItem>
+									<groupId>org.apache.logging.log4j</groupId>
+									<artifactId>log4j-api</artifactId>
+									<version>2.19.0</version>
+								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${output}/lib</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
@@ -129,7 +134,7 @@
 
 		<!-- Resteasy Spring Integration -->
 		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
+			<groupId>org.jboss.resteasy.spring</groupId>
 			<artifactId>resteasy-spring</artifactId>
 		</dependency>
 		<dependency>

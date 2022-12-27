@@ -4,7 +4,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<resteasy.version>4.7.7.Final</resteasy.version>
+		<resteasy.version>6.2.1.Final</resteasy.version>
+		<resteasy.spring.version>3.0.0.Final</resteasy.spring.version>
 		<spring.version>6.0.3</spring.version>
 		<spring.security.version>6.0.1</spring.security.version>
 		<swagger.version>2.2.7</swagger.version>
@@ -75,14 +76,9 @@
 				<version>${resteasy.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.spec.javax.ws.rs</groupId>
-				<artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
-				<version>2.0.2.Final</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.spec.javax.servlet</groupId>
-				<artifactId>jboss-servlet-api_4.0_spec</artifactId>
-				<version>2.0.0.Final</version>
+				<groupId>jakarta.ws.rs</groupId>
+				<artifactId>jakarta.ws.rs-api</artifactId>
+				<version>3.1.0</version>
 			</dependency>
 
 			<!-- Resteasy Servlet Container Initializer -->
@@ -108,9 +104,9 @@
 
 			<!-- Resteasy Spring Integration -->
 			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
+				<groupId>org.jboss.resteasy.spring</groupId>
 				<artifactId>resteasy-spring</artifactId>
-				<version>${resteasy.version}</version>
+				<version>${resteasy.spring.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.resteasy</groupId>
