@@ -65,23 +65,6 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>copy-resources</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${output}/conf/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/conf</directory>
-									<exclude>log4j.xml</exclude>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-
-					<execution>
 						<id>copy-logging-config</id>
 						<phase>package</phase>
 						<goals>
@@ -93,72 +76,6 @@
 								<resource>
 									<directory>${basedir}/conf</directory>
 									<include>log4j.xml</include>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>copy-test</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${output}/conf.test/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/conf.test</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>copy-prod</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${output}/conf.prod/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/conf.prod</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>copy-devel</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${output}/conf.devel/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/conf.devel</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>copy-deployment</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<overwrite>true</overwrite>
-							<outputDirectory>${output}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}</directory>
-									<include>deployment.txt</include>
 								</resource>
 							</resources>
 						</configuration>
